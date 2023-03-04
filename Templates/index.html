@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backorder Prediction</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <form action="form" method="post">
+        <label for="national_inv">national_inv:</label>
+        <input type="text" id="national_inv" name="national_inv" min="0" max="100" placeholder="Current inventory level for the product" required>
+
+        <label for="lead_time">lead_time:</label>
+        <input type="text" id="lead_time" name="lead_time" min="0" max="100" placeholder="Transit time for the product" required>
+
+        <label for="sales_1_month">sales_1_month:</label>
+        <input type="text" id="sales_1_month" name="sales_1_month" min="0" placeholder="Sales quantity for the prior 1 month" required>
+
+        <label for="pieces_past_due">pieces_past_due:</label>
+        <input type="text" id="pieces_past_due" name="pieces_past_due" min="0" max="100" placeholder="Amount overdue from source" required>
+
+        <label for="perf_6_month_avg">perf_6_month_avg:</label>
+        <input type="text" id="perf_6_month_avg" name="perf_6_month_avg" min="0" max="100" placeholder="Source performance for the prior 6 months" required>
+
+        <label for="in_transit_qty">in_transit_qty:</label>
+        <input type="text" id="in_transit_qty" name="in_transit_qty" min="0" max="14" placeholder="Amount of the product in transit from source" required>
+
+        <label for="local_bo_qty">local_bo_qty:</label>
+        <input type="text" id="local_bo_qty" name="local_bo_qty" placeholder="Amount of stock orders overdue" required min="0" max="10000">
+        
+        <label for="deck_risk">deck_risk:</label>
+        <input type="text" id="deck_risk" name="deck_risk" placeholder="1 indicates risk identified, and 0 indicates no risk" required min="0" max="1">
+        
+        <label for="oe_constraint">oe_constraint:</label>
+        <input type="text" id="oe_constraint" name="oe_constraint" placeholder="1 indicates risk identified, and 0 indicates no risk" required min="0" max="1">
+        
+        <label for="ppap_risk">ppap_risk:</label>
+        <input type="text" id="ppap_risk" name="ppap_risk" placeholder="1 indicates risk identified, and 0 indicates no risk" required min="0" max="10000">
+        
+        <label for="stop_auto_buy">stop_auto_buy:</label>
+        <input type="text" id="stop_auto_buy" name="stop_auto_buy" placeholder="1 For 'Yes', 0 for 'No' " required min="0" max="1">
+        
+        <label for="rev_stop">rev_stop:</label>
+        <input type="text" id="rev_stop" name="rev_stop" placeholder="1 For 'Yes', 0 for 'No'" required min="0" max="10000">
+        
+        <input type="submit" id="submit" name="submit" value="Predict Backorder">
+
+    </form>
+</body>
+</html>
