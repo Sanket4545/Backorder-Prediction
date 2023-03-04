@@ -1,0 +1,253 @@
+2023-02-25 23:37:17,723 - INFO - Preprocessing data...
+2023-02-25 23:37:24,868 - INFO - Data analysis...
+2023-02-25 23:37:26,931 - INFO - 1026827    1
+1489888    1
+1489898    1
+1489897    1
+1489896    1
+          ..
+1910576    1
+1910575    1
+1910574    1
+1910573    1
+1502009    1
+Name: sku, Length: 1687860, dtype: int64
+2023-02-25 23:37:27,072 - INFO - No     1686953
+Yes        907
+Name: potential_issue, dtype: int64
+2023-02-25 23:37:27,159 - INFO - No     1300377
+Yes     387483
+Name: deck_risk, dtype: int64
+2023-02-25 23:37:27,237 - INFO - No     1687615
+Yes        245
+Name: oe_constraint, dtype: int64
+2023-02-25 23:37:27,337 - INFO - No     1484026
+Yes     203834
+Name: ppap_risk, dtype: int64
+2023-02-25 23:37:27,437 - INFO - Yes    1626774
+No       61086
+Name: stop_auto_buy, dtype: int64
+2023-02-25 23:37:27,511 - INFO - No     1687129
+Yes        731
+Name: rev_stop, dtype: int64
+2023-02-25 23:37:27,593 - INFO - No     1676567
+Yes      11293
+Name: went_on_backorder, dtype: int64
+2023-02-25 23:37:36,481 - INFO - Data visualization...
+2023-02-25 23:37:42,576 - INFO - Resampling data...
+2023-02-25 23:37:44,992 - INFO - Splitting data into train and test sets...
+2023-02-25 23:37:47,444 - INFO - Training and evaluating models...
+2023-02-25 23:38:21,283 - INFO - Model: DecisionTreeClassifier, Accuracy Score: 0.9558890411510422, Confusion Matrix: [[312996  22173]
+ [  7409 328049]]
+2023-02-25 23:44:15,187 - INFO - Model: RandomForestClassifier, Accuracy Score: 0.956643558938128, Confusion Matrix: [[313468  21701]
+ [  7375 328083]]
+2023-02-28 22:08:32,837 - INFO - Preprocessing data...
+2023-02-28 22:08:46,129 - INFO - Data analysis...
+2023-02-28 22:08:48,909 - INFO - 1026827    1
+1489888    1
+1489898    1
+1489897    1
+1489896    1
+          ..
+1910576    1
+1910575    1
+1910574    1
+1910573    1
+1502009    1
+Name: sku, Length: 1687860, dtype: int64
+2023-02-28 22:08:49,087 - INFO - No     1686953
+Yes        907
+Name: potential_issue, dtype: int64
+2023-02-28 22:08:49,239 - INFO - No     1300377
+Yes     387483
+Name: deck_risk, dtype: int64
+2023-02-28 22:08:49,385 - INFO - No     1687615
+Yes        245
+Name: oe_constraint, dtype: int64
+2023-02-28 22:08:49,545 - INFO - No     1484026
+Yes     203834
+Name: ppap_risk, dtype: int64
+2023-02-28 22:08:49,746 - INFO - Yes    1626774
+No       61086
+Name: stop_auto_buy, dtype: int64
+2023-02-28 22:08:49,913 - INFO - No     1687129
+Yes        731
+Name: rev_stop, dtype: int64
+2023-02-28 22:08:50,077 - INFO - No     1676567
+Yes      11293
+Name: went_on_backorder, dtype: int64
+2023-02-28 22:09:05,212 - INFO - national_inv        -0.001315
+lead_time           -0.018104
+in_transit_qty      -0.002427
+forecast_3_month    -0.000340
+forecast_6_month    -0.000840
+forecast_9_month    -0.001030
+sales_1_month       -0.001131
+sales_3_month       -0.001512
+sales_6_month       -0.001728
+sales_9_month       -0.001764
+min_bank            -0.001867
+potential_issue      0.014090
+pieces_past_due      0.000516
+perf_6_month_avg     0.011676
+perf_12_month_avg    0.011593
+local_bo_qty         0.009504
+deck_risk           -0.011691
+oe_constraint        0.003837
+ppap_risk            0.008814
+stop_auto_buy       -0.002424
+rev_stop            -0.001708
+Name: went_on_backorder, dtype: float64
+2023-02-28 22:09:05,216 - INFO - potential_issue      0.014090
+perf_6_month_avg     0.011676
+perf_12_month_avg    0.011593
+local_bo_qty         0.009504
+ppap_risk            0.008814
+Name: went_on_backorder, dtype: float64
+2023-02-28 22:09:05,218 - INFO - lead_time   -0.018104
+deck_risk   -0.011691
+Name: went_on_backorder, dtype: float64
+2023-02-28 22:09:05,475 - INFO - Data visualization...
+2023-02-28 22:09:16,191 - INFO - Resampling data...
+2023-02-28 22:09:20,655 - INFO - Splitting data into train and test sets...
+2023-02-28 22:09:24,425 - INFO - Training and evaluating models...
+2023-02-28 22:10:07,368 - INFO - Model: DecisionTreeClassifier, Accuracy Score: 0.9556549318771836, Confusion Matrix: [[312980  22189]
+ [  7550 327908]]
+2023-03-02 11:40:14,781 - INFO - Preprocessing data...
+2023-03-02 11:40:23,242 - INFO - Data analysis...
+2023-03-02 11:40:25,331 - INFO - 1026827    1
+1489888    1
+1489898    1
+1489897    1
+1489896    1
+          ..
+1910576    1
+1910575    1
+1910574    1
+1910573    1
+1502009    1
+Name: sku, Length: 1687860, dtype: int64
+2023-03-02 11:40:25,449 - INFO - No     1686953
+Yes        907
+Name: potential_issue, dtype: int64
+2023-03-02 11:40:25,533 - INFO - No     1300377
+Yes     387483
+Name: deck_risk, dtype: int64
+2023-03-02 11:40:25,614 - INFO - No     1687615
+Yes        245
+Name: oe_constraint, dtype: int64
+2023-03-02 11:40:25,704 - INFO - No     1484026
+Yes     203834
+Name: ppap_risk, dtype: int64
+2023-03-02 11:40:25,782 - INFO - Yes    1626774
+No       61086
+Name: stop_auto_buy, dtype: int64
+2023-03-02 11:40:25,859 - INFO - No     1687129
+Yes        731
+Name: rev_stop, dtype: int64
+2023-03-02 11:40:25,934 - INFO - No     1676567
+Yes      11293
+Name: went_on_backorder, dtype: int64
+2023-03-02 11:40:35,556 - INFO - national_inv        -0.001315
+lead_time           -0.018104
+in_transit_qty      -0.002427
+forecast_3_month    -0.000340
+forecast_6_month    -0.000840
+forecast_9_month    -0.001030
+sales_1_month       -0.001131
+sales_3_month       -0.001512
+sales_6_month       -0.001728
+sales_9_month       -0.001764
+min_bank            -0.001867
+potential_issue      0.014090
+pieces_past_due      0.000516
+perf_6_month_avg     0.011676
+perf_12_month_avg    0.011593
+local_bo_qty         0.009504
+deck_risk           -0.011691
+oe_constraint        0.003837
+ppap_risk            0.008814
+stop_auto_buy       -0.002424
+rev_stop            -0.001708
+Name: went_on_backorder, dtype: float64
+2023-03-02 11:40:35,559 - INFO - potential_issue      0.014090
+perf_6_month_avg     0.011676
+perf_12_month_avg    0.011593
+local_bo_qty         0.009504
+ppap_risk            0.008814
+Name: went_on_backorder, dtype: float64
+2023-03-02 11:40:35,559 - INFO - lead_time   -0.018104
+deck_risk   -0.011691
+Name: went_on_backorder, dtype: float64
+2023-03-02 11:40:35,731 - INFO - Data visualization...
+2023-03-02 11:40:43,546 - INFO - Resampling data...
+2023-03-02 11:40:48,403 - INFO - Splitting data into train and test sets...
+2023-03-04 11:06:09,304 - INFO - Preprocessing data...
+2023-03-04 11:06:24,525 - INFO - Data analysis...
+2023-03-04 11:06:27,205 - INFO - 1026827    1
+1489888    1
+1489898    1
+1489897    1
+1489896    1
+          ..
+1910576    1
+1910575    1
+1910574    1
+1910573    1
+1502009    1
+Name: sku, Length: 1687860, dtype: int64
+2023-03-04 11:06:27,403 - INFO - No     1686953
+Yes        907
+Name: potential_issue, dtype: int64
+2023-03-04 11:06:27,621 - INFO - No     1300377
+Yes     387483
+Name: deck_risk, dtype: int64
+2023-03-04 11:06:27,781 - INFO - No     1687615
+Yes        245
+Name: oe_constraint, dtype: int64
+2023-03-04 11:06:27,955 - INFO - No     1484026
+Yes     203834
+Name: ppap_risk, dtype: int64
+2023-03-04 11:06:28,142 - INFO - Yes    1626774
+No       61086
+Name: stop_auto_buy, dtype: int64
+2023-03-04 11:06:28,321 - INFO - No     1687129
+Yes        731
+Name: rev_stop, dtype: int64
+2023-03-04 11:06:28,490 - INFO - No     1676567
+Yes      11293
+Name: went_on_backorder, dtype: int64
+2023-03-04 11:06:45,745 - INFO - national_inv        -0.001315
+lead_time           -0.018104
+in_transit_qty      -0.002427
+forecast_3_month    -0.000340
+forecast_6_month    -0.000840
+forecast_9_month    -0.001030
+sales_1_month       -0.001131
+sales_3_month       -0.001512
+sales_6_month       -0.001728
+sales_9_month       -0.001764
+min_bank            -0.001867
+potential_issue      0.014090
+pieces_past_due      0.000516
+perf_6_month_avg     0.011676
+perf_12_month_avg    0.011593
+local_bo_qty         0.009504
+deck_risk           -0.011691
+oe_constraint        0.003837
+ppap_risk            0.008814
+stop_auto_buy       -0.002424
+rev_stop            -0.001708
+Name: went_on_backorder, dtype: float64
+2023-03-04 11:06:45,748 - INFO - potential_issue      0.014090
+perf_6_month_avg     0.011676
+perf_12_month_avg    0.011593
+local_bo_qty         0.009504
+ppap_risk            0.008814
+Name: went_on_backorder, dtype: float64
+2023-03-04 11:06:45,750 - INFO - lead_time   -0.018104
+deck_risk   -0.011691
+Name: went_on_backorder, dtype: float64
+2023-03-04 11:06:46,004 - INFO - Data visualization...
+2023-03-04 11:06:58,146 - INFO - Resampling data...
+2023-03-04 11:07:00,878 - INFO - Splitting data into train and test sets...
