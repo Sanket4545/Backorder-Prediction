@@ -21,15 +21,14 @@ checking null values, checking outliers, checking imbalance in dataset.
 Ploted colleration matrix to get insights about dependend and independed variables. making bar graphs, box plot, scatter plot, etc.
 
 ## Model Selection
-Made many Models(linear regression, svm, xgboost, Random Forest). But selected RandomForest Regressor.
+Made many Models(Decision Tree, XGBoost, Random Forest). But selected Decision Tree Classifier model.
 
 ## Model Dump
-As per selected trained model is dumped to pickled format for app development
+As per selected trained model is dumped to joblib format for app development
 
 ## Ide used:
-Pycharm
+vscode
 
 Using Flask for making UI. 
 
-## Database 
-Casendra_database
+
