@@ -29,4 +29,7 @@ As per selected trained model is dumped to pickled format for app development
 ## Ide used:
 Pycharm
 
-Using Flask for making UI. Database = Casendra_database
+Using Flask for making UI. 
+
+## Database 
+Casendra_database
