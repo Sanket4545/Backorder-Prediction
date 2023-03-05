@@ -1,6 +1,36 @@
 import joblib
 from flask import Flask, render_template, request, redirect
+from cassandra.cluster import Cluster
+
 app = Flask(__name__)
+
+# Connect to the Cassandra cluster
+cluster = Cluster(['localhost'])
+session = cluster.connect()
+
+session.execute("""
+    CREATE KEYSPACE IF NOT EXISTS mykeyspace 
+    WITH REPLICATION = { 'class' : 'SimpleStrategy', 'replication_factor' : 1 }
+""")
+
+session.execute("""
+    CREATE TABLE IF NOT EXISTS mykeyspace.information (
+        national_inv UUID PRIMARY KEY,
+        lead_time INT,
+        sales_1_month INT,
+        pieces_past_due INT,
+        perf_6_month_avg INT,
+        in_transit_qty INT,
+        local_bo_qty INT,
+        deck_risk INT,
+        oe_constraint INT,
+        ppap_risk INT,
+        stop_auto_buy INT,
+        rev_stop INT,
+    )
+""")
+
+
 
 @app.route('/')
 def home():
@@ -21,8 +51,16 @@ def brain():
     stop_auto_buy=float(request.form['stop_auto_buy'])
     rev_stop=float(request.form['rev_stop'])
      
-    values=[national_inv,lead_time,sales_1_month,pieces_past_due,perf_6_month_avg,in_transit_qty,local_bo_qty,deck_risk,oe_constraint,ppap_risk,stop_auto_buy,rev_stop]
+    values=[national_inv,lead_time,sales_1_month,pieces_past_due,perf_6_month_avg,
+            in_transit_qty,local_bo_qty,deck_risk,oe_constraint,ppap_risk,stop_auto_buy,rev_stop]
     
+    session.execute("""
+        INSERT INTO mykeyspace.mytable (national_inv, lead_time, sales_1_month, 
+        pieces_past_due, perf_6_month_avg, in_transit_qty, local_bo_qty, deck_risk,
+        oe_constraint,ppap_risk,stop_auto_buy,rev_stop)
+        VALUES (%s, %s, %s, %s, %s, %s, %s, %s,%s,%s,%s)
+    """, (national_inv,lead_time,sales_1_month,pieces_past_due,perf_6_month_avg,
+            in_transit_qty,local_bo_qty,deck_risk,oe_constraint,ppap_risk,stop_auto_buy,rev_stop))
 
     joblib.load('backorder_model','r')
     model = joblib.load(open('backorder_model','rb'))
