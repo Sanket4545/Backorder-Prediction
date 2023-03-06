@@ -29,6 +29,7 @@ As per selected trained model is dumped to joblib format for app development
 ## Ide used:
 vscode
 
+## Framework used:
 Using Flask for making UI. 
 
 
